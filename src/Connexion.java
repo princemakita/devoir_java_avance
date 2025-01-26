@@ -212,7 +212,11 @@ public class Connexion extends javax.swing.JFrame {
                 + "Id INTEGER UNIQUE , "
                 + "identifiant VARCHAR(255) , "
                 + "mot_de_pass VARCHAR(255));";
+
+        String insert = "INSERT INTO enseignants (nom, prenom, date_de_naissance, lieu_de_naissance, sexe, nationalite) VALUES ();";
+
         try {
+            PreparedStatement statement = getConnection().prepareStatement(insert);
 
             Statement statement = getConnection().createStatement();
             statement.execute(enseignants);
