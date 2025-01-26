@@ -7,30 +7,14 @@
 import javax.swing.*;
 import java.sql.*;
 
+import static devoir.de.recherche.d.java.avance.DbInstance.getConnection;
+import static devoir.de.recherche.d.java.avance.DbInstance.releaseConnection;
+
 /**
  *
  * @author Méda BOUKA
  */
 public class Connexion extends javax.swing.JFrame {
-    String url = "jdbc:mysql://localhost:3306/public";
-    String utilisateur = "root";
-    String motDePass = "thedevs2024!";
-    private Connection con = null;
-
-    public Connection dbConnection(){
-        try {
-            con = DriverManager.getConnection(url, utilisateur, motDePass);
-            System.out.println("Database connected!");
-            return con;
-        } catch (SQLException e) {
-            throw new IllegalStateException("Cannot connect the database!", e);
-        }
-
-    }
-
-    public Connection getConnection(){
-        return con == null? dbConnection():con;
-    }
 
     /**
      * Creates new form Connexion
@@ -216,8 +200,6 @@ public class Connexion extends javax.swing.JFrame {
         String insert = "INSERT INTO enseignants (nom, prenom, date_de_naissance, lieu_de_naissance, sexe, nationalite) VALUES ();";
 
         try {
-            PreparedStatement statement = getConnection().prepareStatement(insert);
-
             Statement statement = getConnection().createStatement();
             statement.execute(enseignants);
             statement.execute(utilisateurs);
@@ -260,7 +242,7 @@ public class Connexion extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Utilisateur non trouvé:");
             } else {
                 statement.close();
-                con.close();
+//                releaseConnection();
                 this.setVisible(false);
                 this.dispose();
                 new GestionTableauDeBord().setVisible(true);

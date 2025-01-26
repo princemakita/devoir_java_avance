@@ -4,6 +4,19 @@
  * and open the template in the editor.
  */
 
+import devoir.de.recherche.d.java.avance.DbInstance;
+
+import javax.swing.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Locale;
+
+import static devoir.de.recherche.d.java.avance.DbInstance.getConnection;
+import static devoir.de.recherche.d.java.avance.DbInstance.releaseConnection;
+
 /**
  *
  * @author Méda BOUKA
@@ -480,9 +493,37 @@ public class GestionEnseignants extends javax.swing.JFrame {
         String nationalite = txtNationalite.getText();
         String provenance = txtProvenance.getText();
         
-          String query = "INSERT INTO enseignants (nom, prenom, date_de_naissance, lieu_de_naissance, sexe, nationalite,situation_matrimonial,adresse,quartier,email,telephone,statut,arrive,provenance,cni,enfants) "
+          String query = "INSERT INTO enseignants (nom, prenom, date_de_naissance, lieu_de_naissance, sexe, nationalite,situation_matrimoniale,adresse,quartier,email,telephone,statut,arrive,provenance,cni,enfants) "
                   + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
-          PreparedStatement
+        try{
+
+            PreparedStatement preparedStatement = DbInstance.getConnection().prepareStatement(query);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setString(2,prenom);
+            preparedStatement.setString(3, naissance);
+            preparedStatement.setString(4,lieuDeNaissance);
+            preparedStatement.setString(5,sexe);
+            preparedStatement.setString(6,nationalite);
+            preparedStatement.setString(7,statutMatrimonial);
+            preparedStatement.setString(8,adresse);
+            preparedStatement.setString(9,quartier);
+            preparedStatement.setString(10,email);
+            preparedStatement.setString(11,telephone);
+            preparedStatement.setString(12,statut);
+            preparedStatement.setString(13, dateArrivee);
+            preparedStatement.setString(14,provenance);
+            preparedStatement.setString(15,cni);
+            preparedStatement.setInt(16,Integer.parseInt(enfants));
+            preparedStatement.execute();
+
+            JOptionPane.showMessageDialog(null, "Enseignant ajouté.");
+            clearFields();
+            DbInstance.releaseConnection();
+
+        } catch (Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Erreur: " + e.getMessage());
+        }
           
         
 
@@ -503,8 +544,47 @@ public class GestionEnseignants extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAjouterActionPerformed
 
     private void btnAfficherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfficherActionPerformed
-        // TODO add your handling code here:
+        clearFields();
+//        try{
+//            PreparedStatement statement = getConnection().prepareStatement("" +
+//                    "SELECT * FROM utilisateurs where identifiant =? AND mot_de_pass=?");
+//            statement.setString(1, txtIdentifiant.getText());
+//            statement.setString(2, txtMotDePass.getText());
+//
+//            ResultSet resultSet = statement.executeQuery();
+//            if (!resultSet.next() ) {
+//                JOptionPane.showMessageDialog(null, "Utilisateur non trouvé:");
+//            } else {
+//                statement.close();
+//                releaseConnection();
+//                this.setVisible(false);
+//                this.dispose();
+//                new GestionTableauDeBord().setVisible(true);
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }//GEN-LAST:event_btnAfficherActionPerformed
+
+    private void clearFields(){
+        txtNom.setText("");
+        txtPrenom.setText("");
+        txtAdresse.setText("");
+        txtEmail.setText("");
+        txtSexe.setText("");
+        txtCNI.setText("");
+        txtTelephone.setText("");
+        txtDateDeNaissance.setText("");
+        txtLieuDeNaissance.setText("");
+        txtStatut.setText("");
+        txtEnfants.setText("");
+        txtQuartier.setText("");
+        txtStatutMatrimonial.setText("");
+        txtProvenance.setText("");
+        txtNationalite.setText("");
+        txtDateArrivee.setText("");
+    }
 
     private void btnSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupprimerActionPerformed
         // TODO add your handling code here:
