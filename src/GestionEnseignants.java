@@ -479,7 +479,12 @@ public class GestionEnseignants extends javax.swing.JFrame {
         String lieuDeNaissance = txtLieuDeNaissance.getText();
         String nationalite = txtNationalite.getText();
         String provenance = txtProvenance.getText();
-
+        
+          String query = "INSERT INTO enseignants (nom, prenom, date_de_naissance, lieu_de_naissance, sexe, nationalite,situation_matrimonial,adresse,quartier,email,telephone,statut,arrive,provenance,cni,enfants) "
+                  + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
+          PreparedStatement
+          
+        
 
 
 
