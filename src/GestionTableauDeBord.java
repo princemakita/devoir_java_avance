@@ -8,12 +8,12 @@
  *
  * @author Méda BOUKA
  */
-public class GESTIONDESTABLEAUXDEBORD extends javax.swing.JFrame {
+public class GestionTableauDeBord extends javax.swing.JFrame {
 
     /**
-     * Creates new form GESTIONDESTABLEAUXDEBORD
+     * Creates new form GestionTableauDeBord
      */
-    public GESTIONDESTABLEAUXDEBORD() {
+    public GestionTableauDeBord() {
         initComponents();
     }
 
@@ -27,37 +27,42 @@ public class GESTIONDESTABLEAUXDEBORD extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        GESTIONDESTABLEAUSDESBORDS = new javax.swing.JLabel();
-        REFERENCIEL = new javax.swing.JButton();
-        ELEVES = new javax.swing.JButton();
-        SCOLARITE = new javax.swing.JButton();
-        PAIEMENT = new javax.swing.JButton();
-        RETOUR = new javax.swing.JButton();
+        lblTableauDeBord = new javax.swing.JLabel();
+        btnReferenciel = new javax.swing.JButton();
+        btnEleves = new javax.swing.JButton();
+        btnScolarite = new javax.swing.JButton();
+        btnPaiement = new javax.swing.JButton();
+        btnRetour = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 51));
         jPanel1.setForeground(new java.awt.Color(255, 51, 51));
 
-        GESTIONDESTABLEAUSDESBORDS.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        GESTIONDESTABLEAUSDESBORDS.setText("GESTION DES TABLEAUX DE BORD");
+        lblTableauDeBord.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblTableauDeBord.setText("GESTION DES TABLEAUX DE BORD");
 
-        REFERENCIEL.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        REFERENCIEL.setText("REFERENCIEL");
-        REFERENCIEL.addActionListener(new java.awt.event.ActionListener() {
+        btnReferenciel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnReferenciel.setText("REFERENCIEL");
+
+        btnEleves.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnEleves.setText("ELEVES");
+
+        btnScolarite.setText("SCOLARITE");
+        btnScolarite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                REFERENCIELActionPerformed(evt);
+                btnScolariteActionPerformed(evt);
             }
         });
 
-        ELEVES.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        ELEVES.setText("ELEVES");
+        btnPaiement.setText("PAIEMENT");
 
-        SCOLARITE.setText("SCOLARITE");
-
-        PAIEMENT.setText("PAIEMENT");
-
-        RETOUR.setText("RETOUR");
+        btnRetour.setText("RETOUR");
+        btnRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRetourActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -66,35 +71,35 @@ public class GESTIONDESTABLEAUXDEBORD extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(GESTIONDESTABLEAUSDESBORDS)
+                    .addComponent(lblTableauDeBord)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(REFERENCIEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ELEVES, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(SCOLARITE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(PAIEMENT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnReferenciel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnEleves, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnScolarite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnPaiement, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(76, 76, 76)))
                 .addContainerGap(57, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(RETOUR, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnRetour, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(GESTIONDESTABLEAUSDESBORDS)
+                .addComponent(lblTableauDeBord)
                 .addGap(42, 42, 42)
-                .addComponent(REFERENCIEL)
+                .addComponent(btnReferenciel)
                 .addGap(26, 26, 26)
-                .addComponent(ELEVES)
+                .addComponent(btnEleves)
                 .addGap(27, 27, 27)
-                .addComponent(SCOLARITE)
+                .addComponent(btnScolarite)
                 .addGap(28, 28, 28)
-                .addComponent(PAIEMENT)
+                .addComponent(btnPaiement)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
-                .addComponent(RETOUR)
+                .addComponent(btnRetour)
                 .addContainerGap())
         );
 
@@ -112,9 +117,15 @@ public class GESTIONDESTABLEAUXDEBORD extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void REFERENCIELActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REFERENCIELActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_REFERENCIELActionPerformed
+    private void btnScolariteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnScolariteActionPerformed
+        this.setVisible(false);
+        this.dispose();
+        new GestionEnseignants().setVisible(true);
+    }//GEN-LAST:event_btnScolariteActionPerformed
+
+    private void btnRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetourActionPerformed
+        System.exit(1);
+    }//GEN-LAST:event_btnRetourActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,31 +144,31 @@ public class GESTIONDESTABLEAUXDEBORD extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESTABLEAUXDEBORD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionTableauDeBord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESTABLEAUXDEBORD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionTableauDeBord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESTABLEAUXDEBORD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionTableauDeBord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESTABLEAUXDEBORD.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionTableauDeBord.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GESTIONDESTABLEAUXDEBORD().setVisible(true);
+                new GestionTableauDeBord().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ELEVES;
-    private javax.swing.JLabel GESTIONDESTABLEAUSDESBORDS;
-    private javax.swing.JButton PAIEMENT;
-    private javax.swing.JButton REFERENCIEL;
-    private javax.swing.JButton RETOUR;
-    private javax.swing.JButton SCOLARITE;
+    private javax.swing.JButton btnEleves;
+    private javax.swing.JButton btnPaiement;
+    private javax.swing.JButton btnReferenciel;
+    private javax.swing.JButton btnRetour;
+    private javax.swing.JButton btnScolarite;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lblTableauDeBord;
     // End of variables declaration//GEN-END:variables
 }

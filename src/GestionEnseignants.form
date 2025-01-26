@@ -55,15 +55,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="AFFICHER" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="AJOUTER" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAfficher" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnAjouter" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="ENREGISTRER" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEnregistrer" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
@@ -78,8 +78,8 @@
                                                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                                           <Component id="EMAIL" min="-2" pref="51" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="ADRESSE" min="-2" pref="90" max="-2" attributes="0"/>
-                                                      <Component id="eMAIL" min="-2" pref="100" max="-2" attributes="0"/>
+                                                      <Component id="txtAdresse" min="-2" pref="90" max="-2" attributes="0"/>
+                                                      <Component id="txtEmail" min="-2" pref="100" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -93,24 +93,26 @@
                                                   <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="NAME" min="-2" pref="55" max="-2" attributes="0"/>
-                                                      <Component id="NOM" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
+                                                      <Component id="txtNom" alignment="0" min="-2" pref="72" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="97" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="DATEDENAISS" min="-2" max="-2" attributes="0"/>
-                                                      <Group type="102" attributes="0">
-                                                          <Component id="DATEDENAISSANCE" min="-2" pref="119" max="-2" attributes="0"/>
-                                                          <EmptySpace min="0" pref="127" max="32767" attributes="0"/>
-                                                      </Group>
                                                       <Group type="102" attributes="0">
                                                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="0" attributes="0">
-                                                              <Component id="SEXE" min="-2" pref="82" max="-2" attributes="0"/>
+                                                              <Component id="txtSexe" min="-2" pref="82" max="-2" attributes="0"/>
                                                               <Component id="SEX" alignment="0" max="32767" attributes="0"/>
                                                           </Group>
+                                                      </Group>
+                                                      <Group type="102" attributes="0">
+                                                          <Group type="103" groupAlignment="0" attributes="0">
+                                                              <Component id="DATEDENAISS" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="txtDateDeNaissance" min="-2" pref="119" max="-2" attributes="0"/>
+                                                          </Group>
+                                                          <EmptySpace min="0" pref="127" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -118,7 +120,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Group type="102" attributes="0">
                                                   <EmptySpace min="-2" pref="227" max="-2" attributes="0"/>
-                                                  <Component id="NATIONALITA" min="-2" pref="84" max="-2" attributes="0"/>
+                                                  <Component id="txtNationalite" min="-2" pref="84" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace max="-2" attributes="0"/>
@@ -129,7 +131,7 @@
                                                       </Group>
                                                       <Group type="102" alignment="1" attributes="0">
                                                           <Group type="103" groupAlignment="1" attributes="0">
-                                                              <Component id="PRENOM" min="-2" pref="69" max="-2" attributes="0"/>
+                                                              <Component id="txtPrenom" min="-2" pref="69" max="-2" attributes="0"/>
                                                               <Component id="FIRSTNAME" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -140,7 +142,7 @@
                                                   <EmptySpace min="-2" pref="210" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Component id="LIEUDENAISS" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="LIEUDENAISSANCE" min="-2" pref="84" max="-2" attributes="0"/>
+                                                      <Component id="txtLieuDeNaissance" min="-2" pref="84" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                           </Group>
@@ -155,14 +157,14 @@
                                           <Component id="RECHERCH" min="-2" pref="79" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="MODIFIER" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnModifier" alignment="1" min="-2" max="-2" attributes="0"/>
                                               <Component id="ANNULER" alignment="1" min="-2" max="-2" attributes="0"/>
-                                              <Component id="RECHERCHER" min="-2" pref="101" max="-2" attributes="0"/>
+                                              <Component id="txtRechercher" min="-2" pref="101" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="RETOUR" min="-2" max="-2" attributes="0"/>
-                                              <Component id="SUPPRIMER" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnRetour" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btnSupprimer" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
@@ -173,10 +175,10 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="NOMBREENFANTENCHARGE" min="-2" max="-2" attributes="0"/>
-                                              <Component id="NOMBREDENFANTENCHARGE" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtEnfants" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                                   <Component id="DATEDARRIVERAUSCHOOL" min="-2" pref="143" max="-2" attributes="0"/>
-                                                  <Component id="DATEDARRIVERALECOLE" min="-2" pref="154" max="-2" attributes="0"/>
+                                                  <Component id="txtDateArrivee" min="-2" pref="154" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
@@ -188,25 +190,25 @@
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="SITUATIONMATRIMONIAL" min="-2" pref="151" max="-2" attributes="0"/>
+                                                  <Component id="txtStatutMatrimonial" min="-2" pref="151" max="-2" attributes="0"/>
                                                   <Component id="SITUATIONMATRI" min="-2" max="-2" attributes="0"/>
                                                   <Component id="ECOLEDEPROV" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="ECOLEDEPROVENANCE" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="ANNULE" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                                                  <Component id="txtProvenance" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="btnAnnuler" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
                                               </Group>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" attributes="0">
                                                       <EmptySpace min="-2" pref="349" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="QUATTER" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="QUARTIER" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txtQuartier" min="-2" max="-2" attributes="0"/>
                                                           <Component id="TELEPHONE" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="CNI" min="-2" pref="46" max="-2" attributes="0"/>
+                                                          <Component id="txtCNI" min="-2" pref="46" max="-2" attributes="0"/>
                                                           <Component id="CARTENATIONLEDIDENTITE" min="-2" pref="38" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -214,7 +216,7 @@
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
-                                              <Component id="TTELEPHONNE" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txtTelephone" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -224,7 +226,7 @@
                                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="STATUT" min="-2" max="-2" attributes="0"/>
-                                          <Component id="statut" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtStatut" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="438" max="-2" attributes="0"/>
                                   </Group>
@@ -253,15 +255,15 @@
                   </Group>
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="PRENOM" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="NOM" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPrenom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNom" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="DATEDENAISS" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="DATEDENAISSANCE" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="txtDateDeNaissance" min="-2" pref="20" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="NATIONALITY" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -269,15 +271,15 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="NATIONALITA" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="SEXE" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNationalite" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtSexe" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <Component id="LIEUDENAISS" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="LIEUDENAISSANCE" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtLieuDeNaissance" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -288,16 +290,16 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                          <Component id="SITUATIONMATRIMONIAL" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtStatutMatrimonial" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="NOMBREENFANTENCHARGE" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="NOMBREDENFANTENCHARGE" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtEnfants" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                           <Component id="QUATTER" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="QUARTIER" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtQuartier" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -312,7 +314,7 @@
                                   <Component id="ADRES" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="ADRESSE" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtAdresse" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="TELEPHONE" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -320,10 +322,10 @@
                                       <Group type="102" attributes="0">
                                           <Component id="EMAIL" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="eMAIL" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="TTELEPHONNE" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtTelephone" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Component id="DATEDARRIVERAUSCHOOL" min="-2" pref="24" max="-2" attributes="0"/>
                                       </Group>
@@ -335,40 +337,40 @@
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                          <Component id="DATEDARRIVERALECOLE" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtDateArrivee" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="statut" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtStatut" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="CARTENATIONLEDIDENTITE" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="CNI" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCNI" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ECOLEDEPROV" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                  <Component id="ECOLEDEPROVENANCE" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProvenance" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="96" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                          <Component id="RECHERCHER" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="ENREGISTRER" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtRechercher" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnEnregistrer" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="RECHERCH" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="ANNULE" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAnnuler" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="AJOUTER" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="MODIFIER" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="SUPPRIMER" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAjouter" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnModifier" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnSupprimer" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="AFFICHER" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnAfficher" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="ANNULER" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="RETOUR" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnRetour" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="93" max="32767" attributes="0"/>
               </Group>
@@ -392,50 +394,68 @@
             <Property name="text" type="java.lang.String" value="ENSEIGNANT"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="ENREGISTRER">
+        <Component class="javax.swing.JButton" name="btnEnregistrer">
           <Properties>
             <Property name="text" type="java.lang.String" value="ENREGISTRER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnregistrerActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="ANNULE">
+        <Component class="javax.swing.JButton" name="btnAnnuler">
           <Properties>
             <Property name="text" type="java.lang.String" value="ANNULER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnnulerActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="AJOUTER">
+        <Component class="javax.swing.JButton" name="btnAjouter">
           <Properties>
             <Property name="text" type="java.lang.String" value="AJOUTER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAjouterActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="AFFICHER">
+        <Component class="javax.swing.JButton" name="btnAfficher">
           <Properties>
             <Property name="text" type="java.lang.String" value="AFFICHER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAfficherActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="MODIFIER">
+        <Component class="javax.swing.JButton" name="btnModifier">
           <Properties>
             <Property name="text" type="java.lang.String" value="MODIFIER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifierActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="ANNULER">
           <Properties>
             <Property name="text" type="java.lang.String" value="ANNULER"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="SUPPRIMER">
+        <Component class="javax.swing.JButton" name="btnSupprimer">
           <Properties>
             <Property name="text" type="java.lang.String" value="SUPRIMER"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSupprimerActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="RETOUR">
+        <Component class="javax.swing.JButton" name="btnRetour">
           <Properties>
             <Property name="text" type="java.lang.String" value="RETOUR"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRetourActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="RECHERCHER">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="RECHERCHER"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtRechercher">
         </Component>
         <Component class="javax.swing.JLabel" name="RECHERCH">
           <Properties>
@@ -465,20 +485,14 @@
             <Property name="text" type="java.lang.String" value="PRENOM"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="LIEUDENAISSANCE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="LIEU DE NAISSANCE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtLieuDeNaissance">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLieuDeNaissanceActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="PRENOM">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="PRENOM"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtPrenom">
         </Component>
-        <Component class="javax.swing.JTextField" name="NOM">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="NOM"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtNom">
         </Component>
         <Component class="javax.swing.JLabel" name="DATEDENAISS">
           <Properties>
@@ -522,81 +536,42 @@
             <Property name="text" type="java.lang.String" value="QUARTIER"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="ADRESSE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="ADRESSE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtAdresse">
         </Component>
-        <Component class="javax.swing.JTextField" name="DATEDENAISSANCE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DATE DE NAISSANCE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtDateDeNaissance">
         </Component>
-        <Component class="javax.swing.JTextField" name="NATIONALITA">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="NATIONALITE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtNationalite">
         </Component>
-        <Component class="javax.swing.JTextField" name="SITUATIONMATRIMONIAL">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="SITUATION MATRIMONIALE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtStatutMatrimonial">
         </Component>
-        <Component class="javax.swing.JTextField" name="SEXE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="SEXE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtSexe">
         </Component>
-        <Component class="javax.swing.JTextField" name="eMAIL">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Email"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtEmail">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eMAILActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="NOMBREDENFANTENCHARGE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="NOMBRE D&apos;ENFANTS EN CHARGE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtEnfants">
         </Component>
-        <Component class="javax.swing.JTextField" name="QUARTIER">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="QUARTIER"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtQuartier">
         </Component>
-        <Component class="javax.swing.JTextField" name="TTELEPHONNE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="TELEPHONE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtTelephone">
         </Component>
         <Component class="javax.swing.JLabel" name="TELEPHONE">
           <Properties>
             <Property name="text" type="java.lang.String" value="TELEPHONE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="CNI">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="CNI"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtCNI">
         </Component>
-        <Component class="javax.swing.JTextField" name="DATEDARRIVERALECOLE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="DATE D&apos;ARRIVER A L&apos;ECOLE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtDateArrivee">
         </Component>
-        <Component class="javax.swing.JTextField" name="statut">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="STATUT"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtStatut">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="statutActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStatutActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="ECOLEDEPROVENANCE">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="ECOLE DE PROVENANCE"/>
-          </Properties>
+        <Component class="javax.swing.JTextField" name="txtProvenance">
         </Component>
         <Component class="javax.swing.JLabel" name="ECOLEDEPROV">
           <Properties>

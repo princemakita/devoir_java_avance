@@ -8,12 +8,12 @@
  *
  * @author Méda BOUKA
  */
-public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
+public class GestionEnseignants extends javax.swing.JFrame {
 
     /**
-     * Creates new form GESTIONDESENSEIGNANTS
+     * Creates new form GestionEnseignants
      */
-    public GESTIONDESENSEIGNANTS() {
+    public GestionEnseignants() {
         initComponents();
     }
 
@@ -29,23 +29,23 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
         jPaneANNULE = new javax.swing.JPanel();
         CREATIONENSEIGNAT = new javax.swing.JLabel();
         ENSEIGNANT = new javax.swing.JLabel();
-        ENREGISTRER = new javax.swing.JButton();
-        ANNULE = new javax.swing.JButton();
-        AJOUTER = new javax.swing.JButton();
-        AFFICHER = new javax.swing.JButton();
-        MODIFIER = new javax.swing.JButton();
+        btnEnregistrer = new javax.swing.JButton();
+        btnAnnuler = new javax.swing.JButton();
+        btnAjouter = new javax.swing.JButton();
+        btnAfficher = new javax.swing.JButton();
+        btnModifier = new javax.swing.JButton();
         ANNULER = new javax.swing.JButton();
-        SUPPRIMER = new javax.swing.JButton();
-        RETOUR = new javax.swing.JButton();
-        RECHERCHER = new javax.swing.JTextField();
+        btnSupprimer = new javax.swing.JButton();
+        btnRetour = new javax.swing.JButton();
+        txtRechercher = new javax.swing.JTextField();
         RECHERCH = new javax.swing.JLabel();
         NAME = new javax.swing.JLabel();
         DATEDARRIVERAUSCHOOL = new javax.swing.JLabel();
         SEX = new javax.swing.JLabel();
         FIRSTNAME = new javax.swing.JLabel();
-        LIEUDENAISSANCE = new javax.swing.JTextField();
-        PRENOM = new javax.swing.JTextField();
-        NOM = new javax.swing.JTextField();
+        txtLieuDeNaissance = new javax.swing.JTextField();
+        txtPrenom = new javax.swing.JTextField();
+        txtNom = new javax.swing.JTextField();
         DATEDENAISS = new javax.swing.JLabel();
         LIEUDENAISS = new javax.swing.JLabel();
         ADRES = new javax.swing.JLabel();
@@ -55,20 +55,20 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
         NOMBREENFANTENCHARGE = new javax.swing.JLabel();
         NATIONALITY = new javax.swing.JLabel();
         QUATTER = new javax.swing.JLabel();
-        ADRESSE = new javax.swing.JTextField();
-        DATEDENAISSANCE = new javax.swing.JTextField();
-        NATIONALITA = new javax.swing.JTextField();
-        SITUATIONMATRIMONIAL = new javax.swing.JTextField();
-        SEXE = new javax.swing.JTextField();
-        eMAIL = new javax.swing.JTextField();
-        NOMBREDENFANTENCHARGE = new javax.swing.JTextField();
-        QUARTIER = new javax.swing.JTextField();
-        TTELEPHONNE = new javax.swing.JTextField();
+        txtAdresse = new javax.swing.JTextField();
+        txtDateDeNaissance = new javax.swing.JTextField();
+        txtNationalite = new javax.swing.JTextField();
+        txtStatutMatrimonial = new javax.swing.JTextField();
+        txtSexe = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
+        txtEnfants = new javax.swing.JTextField();
+        txtQuartier = new javax.swing.JTextField();
+        txtTelephone = new javax.swing.JTextField();
         TELEPHONE = new javax.swing.JLabel();
-        CNI = new javax.swing.JTextField();
-        DATEDARRIVERALECOLE = new javax.swing.JTextField();
-        statut = new javax.swing.JTextField();
-        ECOLEDEPROVENANCE = new javax.swing.JTextField();
+        txtCNI = new javax.swing.JTextField();
+        txtDateArrivee = new javax.swing.JTextField();
+        txtStatut = new javax.swing.JTextField();
+        txtProvenance = new javax.swing.JTextField();
         ECOLEDEPROV = new javax.swing.JLabel();
         STATUT = new javax.swing.JLabel();
         CARTENATIONLEDIDENTITE = new javax.swing.JLabel();
@@ -84,23 +84,56 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
         ENSEIGNANT.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ENSEIGNANT.setText("ENSEIGNANT");
 
-        ENREGISTRER.setText("ENREGISTRER");
+        btnEnregistrer.setText("ENREGISTRER");
+        btnEnregistrer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnregistrerActionPerformed(evt);
+            }
+        });
 
-        ANNULE.setText("ANNULER");
+        btnAnnuler.setText("ANNULER");
+        btnAnnuler.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnnulerActionPerformed(evt);
+            }
+        });
 
-        AJOUTER.setText("AJOUTER");
+        btnAjouter.setText("AJOUTER");
+        btnAjouter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAjouterActionPerformed(evt);
+            }
+        });
 
-        AFFICHER.setText("AFFICHER");
+        btnAfficher.setText("AFFICHER");
+        btnAfficher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAfficherActionPerformed(evt);
+            }
+        });
 
-        MODIFIER.setText("MODIFIER");
+        btnModifier.setText("MODIFIER");
+        btnModifier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModifierActionPerformed(evt);
+            }
+        });
 
         ANNULER.setText("ANNULER");
 
-        SUPPRIMER.setText("SUPRIMER");
+        btnSupprimer.setText("SUPRIMER");
+        btnSupprimer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSupprimerActionPerformed(evt);
+            }
+        });
 
-        RETOUR.setText("RETOUR");
-
-        RECHERCHER.setText("RECHERCHER");
+        btnRetour.setText("RETOUR");
+        btnRetour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRetourActionPerformed(evt);
+            }
+        });
 
         RECHERCH.setText("RECHERCHER");
 
@@ -113,11 +146,11 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
 
         FIRSTNAME.setText("PRENOM");
 
-        LIEUDENAISSANCE.setText("LIEU DE NAISSANCE");
-
-        PRENOM.setText("PRENOM");
-
-        NOM.setText("NOM");
+        txtLieuDeNaissance.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLieuDeNaissanceActionPerformed(evt);
+            }
+        });
 
         DATEDENAISS.setText("DATE DE NAISSANCE");
 
@@ -135,43 +168,19 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
 
         QUATTER.setText("QUARTIER");
 
-        ADRESSE.setText("ADRESSE");
-
-        DATEDENAISSANCE.setText("DATE DE NAISSANCE");
-
-        NATIONALITA.setText("NATIONALITE");
-
-        SITUATIONMATRIMONIAL.setText("SITUATION MATRIMONIALE");
-
-        SEXE.setText("SEXE");
-
-        eMAIL.setText("Email");
-        eMAIL.addActionListener(new java.awt.event.ActionListener() {
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eMAILActionPerformed(evt);
+                txtEmailActionPerformed(evt);
             }
         });
-
-        NOMBREDENFANTENCHARGE.setText("NOMBRE D'ENFANTS EN CHARGE");
-
-        QUARTIER.setText("QUARTIER");
-
-        TTELEPHONNE.setText("TELEPHONE");
 
         TELEPHONE.setText("TELEPHONE");
 
-        CNI.setText("CNI");
-
-        DATEDARRIVERALECOLE.setText("DATE D'ARRIVER A L'ECOLE");
-
-        statut.setText("STATUT");
-        statut.addActionListener(new java.awt.event.ActionListener() {
+        txtStatut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                statutActionPerformed(evt);
+                txtStatutActionPerformed(evt);
             }
         });
-
-        ECOLEDEPROVENANCE.setText("ECOLE DE PROVENANCE");
 
         ECOLEDEPROV.setText("ECOLE DE PROVENANCE");
 
@@ -188,13 +197,13 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(AFFICHER)
-                            .addComponent(AJOUTER))
+                            .addComponent(btnAfficher)
+                            .addComponent(btnAjouter))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPaneANNULELayout.createSequentialGroup()
-                                .addComponent(ENREGISTRER)
+                                .addComponent(btnEnregistrer)
                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -207,8 +216,8 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                         .addGap(10, 10, 10)
                                                         .addComponent(EMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addComponent(ADRESSE, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(eMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addComponent(txtAdresse, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(26, 26, 26)
                                         .addComponent(jLabel14)
                                         .addGap(423, 423, 423))
@@ -218,24 +227,25 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                                 .addGap(109, 109, 109)
                                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(NAME, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(NOM, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                 .addGap(0, 0, Short.MAX_VALUE))
                                             .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                 .addGap(97, 97, 97)
                                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(DATEDENAISS)
-                                                    .addGroup(jPaneANNULELayout.createSequentialGroup()
-                                                        .addComponent(DATEDENAISSANCE, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addGap(0, 127, Short.MAX_VALUE))
                                                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                         .addGap(10, 10, 10)
                                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                            .addComponent(SEXE, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                            .addComponent(SEX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                                                            .addComponent(txtSexe, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(SEX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                                    .addGroup(jPaneANNULELayout.createSequentialGroup()
+                                                        .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(DATEDENAISS)
+                                                            .addComponent(txtDateDeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGap(0, 127, Short.MAX_VALUE)))))
                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                 .addGap(227, 227, 227)
-                                                .addComponent(NATIONALITA, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtNationalite, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,14 +254,14 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                                         .addGap(9, 9, 9))
                                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                            .addComponent(PRENOM, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                             .addComponent(FIRSTNAME))
                                                         .addGap(26, 26, 26))))
                                             .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                 .addGap(210, 210, 210)
                                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(LIEUDENAISS)
-                                                    .addComponent(LIEUDENAISSANCE, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addComponent(txtLieuDeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                         .addGap(56, 56, 56))))
                             .addGroup(jPaneANNULELayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
@@ -260,13 +270,13 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                         .addComponent(RECHERCH, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(MODIFIER, javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(btnModifier, javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(ANNULER, javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(RECHERCHER, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(txtRechercher, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(RETOUR)
-                                            .addComponent(SUPPRIMER)))
+                                            .addComponent(btnRetour)
+                                            .addComponent(btnSupprimer)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                         .addComponent(CREATIONENSEIGNAT, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -274,43 +284,43 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(NOMBREENFANTENCHARGE)
-                                            .addComponent(NOMBREDENFANTENCHARGE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtEnfants, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                                 .addComponent(DATEDARRIVERAUSCHOOL, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(DATEDARRIVERALECOLE, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addComponent(txtDateArrivee, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                         .addGap(11, 11, 11))))
                             .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                     .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(jPaneANNULELayout.createSequentialGroup()
                                             .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(SITUATIONMATRIMONIAL, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtStatutMatrimonial, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addComponent(SITUATIONMATRI)
                                                 .addComponent(ECOLEDEPROV)
-                                                .addComponent(ECOLEDEPROVENANCE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(ANNULE, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(txtProvenance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(btnAnnuler, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                 .addGroup(jPaneANNULELayout.createSequentialGroup()
                                                     .addGap(349, 349, 349)
                                                     .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addComponent(QUATTER)
-                                                        .addComponent(QUARTIER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(txtQuartier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(TELEPHONE)))
                                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                                                     .addGap(14, 14, 14)
                                                     .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(CNI, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(txtCNI, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addComponent(CARTENATIONLEDIDENTITE, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                                                     .addGap(10, 10, 10))))
                                         .addGroup(jPaneANNULELayout.createSequentialGroup()
-                                            .addComponent(TTELEPHONNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addGap(1, 1, 1)))
                                     .addGap(56, 56, 56))
                                 .addGroup(jPaneANNULELayout.createSequentialGroup()
                                     .addGap(43, 43, 43)
                                     .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(STATUT)
-                                        .addComponent(statut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtStatut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(438, 438, 438))))
                         .addContainerGap())))
         );
@@ -328,27 +338,27 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                     .addComponent(NAME, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(PRENOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(NOM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addComponent(DATEDENAISS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(DATEDENAISSANCE, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDateDeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(NATIONALITY)
                             .addComponent(SEX))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(NATIONALITA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SEXE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNationalite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtSexe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addComponent(LIEUDENAISS)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LIEUDENAISSANCE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtLieuDeNaissance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(62, 62, 62)))
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
@@ -356,15 +366,15 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                         .addComponent(SITUATIONMATRI))
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(SITUATIONMATRIMONIAL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtStatutMatrimonial, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addComponent(NOMBREENFANTENCHARGE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(NOMBREDENFANTENCHARGE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtEnfants, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(13, 13, 13)
                         .addComponent(QUATTER)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(QUARTIER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtQuartier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                         .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -376,50 +386,50 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                                 .addComponent(ADRES)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(ADRESSE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtAdresse, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(TELEPHONE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPaneANNULELayout.createSequentialGroup()
                                         .addComponent(EMAIL)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(eMAIL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPaneANNULELayout.createSequentialGroup()
-                                        .addComponent(TTELEPHONNE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(txtTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(DATEDARRIVERAUSCHOOL, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(STATUT))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createSequentialGroup()
                         .addGap(5, 5, 5)
-                        .addComponent(DATEDARRIVERALECOLE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtDateArrivee, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(statut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtStatut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(CARTENATIONLEDIDENTITE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ECOLEDEPROV, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(4, 4, 4)
-                .addComponent(ECOLEDEPROVENANCE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtProvenance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(RECHERCHER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(ENREGISTRER)
+                        .addComponent(txtRechercher, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEnregistrer)
                         .addComponent(RECHERCH, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(ANNULE, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(btnAnnuler, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AJOUTER)
-                    .addComponent(MODIFIER)
-                    .addComponent(SUPPRIMER))
+                    .addComponent(btnAjouter)
+                    .addComponent(btnModifier)
+                    .addComponent(btnSupprimer))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPaneANNULELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AFFICHER)
+                    .addComponent(btnAfficher)
                     .addComponent(ANNULER)
-                    .addComponent(RETOUR))
+                    .addComponent(btnRetour))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -440,13 +450,64 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eMAILActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eMAILActionPerformed
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_eMAILActionPerformed
+    }//GEN-LAST:event_txtEmailActionPerformed
 
-    private void statutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statutActionPerformed
+    private void txtStatutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStatutActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_statutActionPerformed
+    }//GEN-LAST:event_txtStatutActionPerformed
+
+    private void txtLieuDeNaissanceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLieuDeNaissanceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLieuDeNaissanceActionPerformed
+
+    private void btnEnregistrerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnregistrerActionPerformed
+        String nom = txtNom.getText();
+        String prenom = txtPrenom.getText();
+        String adresse = txtAdresse.getText();
+        String email = txtEmail.getText();
+        String sexe = txtSexe.getText();
+        String cni = txtCNI.getText();
+        String telephone = txtTelephone.getText();
+        String dateArrivee = txtDateArrivee.getText();
+        String statutMatrimonial = txtStatutMatrimonial.getText();
+        String enfants = txtEnfants.getText();
+        String quartier = txtQuartier.getText();
+        String statut = txtStatut.getText();
+        String naissance = txtDateDeNaissance.getText();
+        String lieuDeNaissance = txtLieuDeNaissance.getText();
+        String nationalite = txtNationalite.getText();
+        String provenance = txtProvenance.getText();
+
+
+
+
+    }//GEN-LAST:event_btnEnregistrerActionPerformed
+
+    private void btnAnnulerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnnulerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAnnulerActionPerformed
+
+    private void btnRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetourActionPerformed
+        System.exit(1);
+    }//GEN-LAST:event_btnRetourActionPerformed
+
+    private void btnAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAjouterActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAjouterActionPerformed
+
+    private void btnAfficherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfficherActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAfficherActionPerformed
+
+    private void btnSupprimerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSupprimerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSupprimerActionPerformed
+
+    private void btnModifierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifierActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnModifierActionPerformed
 
     /**
      * @param args the command line arguments
@@ -465,70 +526,70 @@ public class GESTIONDESENSEIGNANTS extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESENSEIGNANTS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionEnseignants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESENSEIGNANTS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionEnseignants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESENSEIGNANTS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionEnseignants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GESTIONDESENSEIGNANTS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GestionEnseignants.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GESTIONDESENSEIGNANTS().setVisible(true);
+                new GestionEnseignants().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel ADRES;
-    private javax.swing.JTextField ADRESSE;
-    private javax.swing.JButton AFFICHER;
-    private javax.swing.JButton AJOUTER;
-    private javax.swing.JButton ANNULE;
     private javax.swing.JButton ANNULER;
     private javax.swing.JLabel CARTENATIONLEDIDENTITE;
-    private javax.swing.JTextField CNI;
     private javax.swing.JLabel CREATIONENSEIGNAT;
-    private javax.swing.JTextField DATEDARRIVERALECOLE;
     private javax.swing.JLabel DATEDARRIVERAUSCHOOL;
     private javax.swing.JLabel DATEDENAISS;
-    private javax.swing.JTextField DATEDENAISSANCE;
     private javax.swing.JLabel ECOLEDEPROV;
-    private javax.swing.JTextField ECOLEDEPROVENANCE;
     private javax.swing.JLabel EMAIL;
-    private javax.swing.JButton ENREGISTRER;
     private javax.swing.JLabel ENSEIGNANT;
     private javax.swing.JLabel FIRSTNAME;
     private javax.swing.JLabel LIEUDENAISS;
-    private javax.swing.JTextField LIEUDENAISSANCE;
-    private javax.swing.JButton MODIFIER;
     private javax.swing.JLabel NAME;
-    private javax.swing.JTextField NATIONALITA;
     private javax.swing.JLabel NATIONALITY;
-    private javax.swing.JTextField NOM;
-    private javax.swing.JTextField NOMBREDENFANTENCHARGE;
     private javax.swing.JLabel NOMBREENFANTENCHARGE;
-    private javax.swing.JTextField PRENOM;
-    private javax.swing.JTextField QUARTIER;
     private javax.swing.JLabel QUATTER;
     private javax.swing.JLabel RECHERCH;
-    private javax.swing.JTextField RECHERCHER;
-    private javax.swing.JButton RETOUR;
     private javax.swing.JLabel SEX;
-    private javax.swing.JTextField SEXE;
     private javax.swing.JLabel SITUATIONMATRI;
-    private javax.swing.JTextField SITUATIONMATRIMONIAL;
     private javax.swing.JLabel STATUT;
-    private javax.swing.JButton SUPPRIMER;
     private javax.swing.JLabel TELEPHONE;
-    private javax.swing.JTextField TTELEPHONNE;
-    private javax.swing.JTextField eMAIL;
+    private javax.swing.JButton btnAfficher;
+    private javax.swing.JButton btnAjouter;
+    private javax.swing.JButton btnAnnuler;
+    private javax.swing.JButton btnEnregistrer;
+    private javax.swing.JButton btnModifier;
+    private javax.swing.JButton btnRetour;
+    private javax.swing.JButton btnSupprimer;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JPanel jPaneANNULE;
-    private javax.swing.JTextField statut;
+    private javax.swing.JTextField txtAdresse;
+    private javax.swing.JTextField txtCNI;
+    private javax.swing.JTextField txtDateArrivee;
+    private javax.swing.JTextField txtDateDeNaissance;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEnfants;
+    private javax.swing.JTextField txtLieuDeNaissance;
+    private javax.swing.JTextField txtNationalite;
+    private javax.swing.JTextField txtNom;
+    private javax.swing.JTextField txtPrenom;
+    private javax.swing.JTextField txtProvenance;
+    private javax.swing.JTextField txtQuartier;
+    private javax.swing.JTextField txtRechercher;
+    private javax.swing.JTextField txtSexe;
+    private javax.swing.JTextField txtStatut;
+    private javax.swing.JTextField txtStatutMatrimonial;
+    private javax.swing.JTextField txtTelephone;
     // End of variables declaration//GEN-END:variables
 }

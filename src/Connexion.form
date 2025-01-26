@@ -57,7 +57,7 @@
               </Group>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                  <Component id="SECONNECTER" min="-2" pref="120" max="-2" attributes="0"/>
+                  <Component id="btnConnecter" min="-2" pref="120" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -65,18 +65,18 @@
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="ANNULER" min="-2" pref="124" max="-2" attributes="0"/>
+                          <Component id="btnAnnuler" min="-2" pref="124" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="QUITTER" min="-2" pref="118" max="-2" attributes="0"/>
+                                  <Component id="btnQuitter" min="-2" pref="118" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="VOTREIDENTIFIANT" min="-2" pref="132" max="-2" attributes="0"/>
+                                      <Component id="txtIdentifiant" min="-2" pref="132" max="-2" attributes="0"/>
                                       <Component id="VOTREID" min="-2" pref="115" max="-2" attributes="0"/>
-                                      <Component id="MOTDEPASSE" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
+                                      <Component id="txtMotDePass" alignment="0" min="-2" pref="132" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                               </Group>
@@ -94,35 +94,35 @@
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   <Component id="VOTREID" min="-2" pref="25" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="VOTREIDENTIFIANT" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="txtIdentifiant" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="MOTDEPASE" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="MOTDEPASSE" min="-2" pref="43" max="-2" attributes="0"/>
+                  <Component id="txtMotDePass" min="-2" pref="43" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="ANNULER" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
-                      <Component id="QUITTER" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="btnAnnuler" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
+                      <Component id="btnQuitter" alignment="3" min="-2" pref="44" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="SECONNECTER" min="-2" pref="46" max="-2" attributes="0"/>
+                  <Component id="btnConnecter" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JTextField" name="VOTREIDENTIFIANT">
+        <Component class="javax.swing.JTextField" name="txtIdentifiant">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VOTREIDENTIFIANTActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdentifiantActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="VOTREID">
@@ -130,14 +130,14 @@
             <Property name="text" type="java.lang.String" value="VOTRE IDENTIFIANT"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="MOTDEPASSE">
+        <Component class="javax.swing.JPasswordField" name="txtMotDePass">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="12" style="0"/>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MOTDEPASSEActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMotDePassActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="MOTDEPASE">
@@ -145,28 +145,28 @@
             <Property name="text" type="java.lang.String" value="MOT DE PASSE"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="SECONNECTER">
+        <Component class="javax.swing.JButton" name="btnConnecter">
           <Properties>
             <Property name="text" type="java.lang.String" value="SE CONNECTER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SECONNECTERActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnConnecterActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="ANNULER">
+        <Component class="javax.swing.JButton" name="btnAnnuler">
           <Properties>
             <Property name="text" type="java.lang.String" value="ANNULER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ANNULERActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAnnulerActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="QUITTER">
+        <Component class="javax.swing.JButton" name="btnQuitter">
           <Properties>
             <Property name="text" type="java.lang.String" value="QUITTER"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QUITTERActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnQuitterActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
