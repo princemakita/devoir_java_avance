@@ -119,11 +119,7 @@ public class GestionEnseignants extends javax.swing.JFrame {
         });
 
         btnAfficher.setText("AFFICHER");
-        btnAfficher.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAfficherActionPerformed(evt);
-            }
-        });
+        btnAfficher.addActionListener(evt -> btnAfficherActionPerformed(evt));
 
         btnModifier.setText("MODIFIER");
         btnModifier.addActionListener(new java.awt.event.ActionListener() {
@@ -536,35 +532,58 @@ public class GestionEnseignants extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAnnulerActionPerformed
 
     private void btnRetourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRetourActionPerformed
-        System.exit(1);
+        this.setVisible(false);
+        this.dispose();
+        new GestionTableauDeBord().setVisible(true);
     }//GEN-LAST:event_btnRetourActionPerformed
 
     private void btnAjouterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAjouterActionPerformed
-        // TODO add your handling code here:
+        clearFields();
     }//GEN-LAST:event_btnAjouterActionPerformed
 
     private void btnAfficherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAfficherActionPerformed
         clearFields();
-//        try{
-//            PreparedStatement statement = getConnection().prepareStatement("" +
-//                    "SELECT * FROM utilisateurs where identifiant =? AND mot_de_pass=?");
-//            statement.setString(1, txtIdentifiant.getText());
-//            statement.setString(2, txtMotDePass.getText());
-//
-//            ResultSet resultSet = statement.executeQuery();
-//            if (!resultSet.next() ) {
-//                JOptionPane.showMessageDialog(null, "Utilisateur non trouvé:");
-//            } else {
-//                statement.close();
-//                releaseConnection();
-//                this.setVisible(false);
-//                this.dispose();
-//                new GestionTableauDeBord().setVisible(true);
-//            }
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        String text = txtRechercher.getText();
+
+        try {
+            PreparedStatement statement = getConnection().prepareStatement(
+                    "SELECT * FROM enseignants WHERE nom = ?"
+            );
+            statement.setString(1, text);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            boolean found = false;
+
+            while (resultSet.next()) {
+                found = true;
+                txtNom.setText(resultSet.getString("nom"));
+                txtPrenom.setText(resultSet.getString("prenom"));
+                txtDateDeNaissance.setText(resultSet.getString("date_de_naissance"));
+                txtStatut.setText(resultSet.getString("statut"));
+                txtEnfants.setText(resultSet.getString("enfants"));
+                txtQuartier.setText(resultSet.getString("quartier"));
+                txtEmail.setText(resultSet.getString("email"));
+                txtDateArrivee.setText(resultSet.getString("arrive"));
+                txtProvenance.setText(resultSet.getString("provenance"));
+                txtNationalite.setText(resultSet.getString("nationalite"));
+                txtCNI.setText(resultSet.getString("cni"));
+                txtTelephone.setText(resultSet.getString("telephone"));
+                txtAdresse.setText(resultSet.getString("adresse"));
+                txtStatutMatrimonial.setText(resultSet.getString("situation_matrimoniale"));
+                txtSexe.setText(resultSet.getString("sexe"));
+                txtLieuDeNaissance.setText(resultSet.getString("lieu_de_naissance"));
+            }
+
+            if (!found) {
+                JOptionPane.showMessageDialog(null, "Utilisateur non trouvé:");
+            }
+
+            statement.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_btnAfficherActionPerformed
 
     private void clearFields(){
